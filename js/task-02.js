@@ -8,22 +8,17 @@ const ingredients = [
 ];
 
 
+const ingrediensList = document.querySelector("#ingredients");
+console.log(ingrediensList);
 
+const array = [];
 
-//Getting the ul list from the html
-const ingrediensList = document.getElementById("ingredients");
+ingredients.forEach(ingredient => {
+  const list = document.createElement('li');
+  list.textContent = ingredient;
+  list.classList.add('ingredient');
 
-//Adding the ingrediens 
+  array.push(list);
+});
 
-ingredients.forEach(function (ingredientName) {
-
-  const listItem = document.createElement("li");
-
-  //Adding the ingrediens' names to the li
-
-  listItem.textContent = ingredientName;
-
-  ingrediensList.appendChild(listItem);
-}
-
-);
+ingrediensList.append(...array);

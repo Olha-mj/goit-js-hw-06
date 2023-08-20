@@ -18,15 +18,16 @@ const imgList = document.querySelector(".gallery");
 imgList.style.display = "flex";
 imgList.style.flexDirection = "column";
 imgList.style.gap = "30px";
+imgList.style.listStyleType = "none";
 
 
-const markup = images.map((image) => `<li class="gallery-item"><img src="${image.url}" alt="${image.alt}"></li>`).join("");
+const markup = images.map((image) => `<li class="gallery-item"><img src="${image.url}" alt="${image.alt}", width = "250px"></li>`).join("");
 imgList.insertAdjacentHTML("beforeend", markup);
 
 const imageItems = imgList.querySelectorAll("img");
 
-imageItems.forEach((img) => {
-  img.style.width = "250px";
-});
+// imageItems.forEach((img) => {
+//   img.style.width = "250px";
+// });
 
 
