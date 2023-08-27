@@ -9,3 +9,5 @@ function fontSizeChange() {
   const textFontSize = slider.value + "px";
   textSpan.style.fontSize = textFontSize;
 };
+
+fontSizeChange();

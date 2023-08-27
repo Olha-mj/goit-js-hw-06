@@ -7,7 +7,7 @@ inputField.addEventListener("input", () => {
 
     const inputValue = inputField.value.trim();
 
-    if(inputField === "") {
+    if(inputValue === "") {
         spanName.textContent = "Anonymous";
     }
 
